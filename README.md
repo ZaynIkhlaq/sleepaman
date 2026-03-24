@@ -16,8 +16,8 @@ No credentials stored. No cloud. Runs entirely on your machine using your local 
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/amansleep.git
-cd amansleep
+git clone https://github.com/ZaynIkhlaq/sleepaman.git
+cd sleepaman
 
 # Install dependencies
 npm install
@@ -36,7 +36,7 @@ This opens an interactive menu:
 
 ```
   ╔═══════════════════════════╗
-  ║  😴 amansleep              ║
+  ║  😴 sleepaman              ║
   ║  auto-attend your classes  ║
   ╚═══════════════════════════╝
 

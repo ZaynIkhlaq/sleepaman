@@ -10,7 +10,7 @@ import { startScheduler } from './scheduler.js';
 
 const BANNER = `
 ${chalk.bold.cyan('  ╔═══════════════════════════╗')}
-${chalk.bold.cyan('  ║')}  ${chalk.bold('😴 amansleep')}              ${chalk.bold.cyan('║')}
+${chalk.bold.cyan('  ║')}  ${chalk.bold('😴 sleepaman')}              ${chalk.bold.cyan('║')}
 ${chalk.bold.cyan('  ║')}  ${chalk.dim('auto-attend your classes')}  ${chalk.bold.cyan('║')}
 ${chalk.bold.cyan('  ╚═══════════════════════════╝')}
 `;

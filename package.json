@@ -1,10 +1,10 @@
 {
-  "name": "amansleep",
+  "name": "sleepaman",
   "version": "1.0.0",
   "description": "Auto-attend your online classes",
   "type": "module",
   "bin": {
-    "amansleep": "./src/cli.js"
+    "sleepaman": "./src/cli.js"
   },
   "scripts": {
     "start": "node src/cli.js"
