@@ -5,6 +5,7 @@ import { launchBrowser } from './bot/browser.js';
 import { joinGoogleMeet } from './bot/google-meet.js';
 import { joinTeams } from './bot/teams.js';
 import { joinZoom } from './bot/zoom.js';
+import { sendRandomMessage } from './bot/chat.js';
 
 const JOIN_DELAY_MS = 5 * 60 * 1000; // 5 minutes late
 
@@ -31,6 +32,15 @@ async function joinMeeting(meeting) {
         break;
     }
 
+    // Send a random excuse message sometime in the first 30 mins
+    const chatDelay = Math.floor(Math.random() * 30 * 60 * 1000) + 60000; // 1-30 min
+    const chatTimer = setTimeout(async () => {
+      try {
+        await sendRandomMessage(page, meeting.platform);
+      } catch {}
+    }, chatDelay);
+    console.log(chalk.dim(`  💬 Will send a chat message in ~${Math.round(chatDelay / 60000)} min`));
+
     // Keep alive with mouse movement
     const keepAlive = setInterval(async () => {
       try {
@@ -49,6 +59,7 @@ async function joinMeeting(meeting) {
     console.log(chalk.green(`  ✓ In meeting. Will leave at ${formatTime(endTime)}`));
 
     setTimeout(async () => {
+      clearTimeout(chatTimer);
       clearInterval(keepAlive);
       try {
         await page.close();

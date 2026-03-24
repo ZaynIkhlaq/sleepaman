@@ -1,4 +1,4 @@
-# amansleep
+# sleepaman
 
 Auto-attend your online classes. Joins Google Meet, Teams, and Zoom meetings on your behalf with camera/mic off — so you can sleep in.
 
